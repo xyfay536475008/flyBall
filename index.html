@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<style>
+  #ball {
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border-radius: 50%;
+    background: lightsalmon;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    color: #e5e5e5;
+    text-align: center;
+    user-select: none;
+  }
+</style>
+<body>
+<div id="ball">菜虚鲲</div>
+<script src="subscribe.js"></script>
+<script src="dragBall.js"></script>
+<script src="flyBall.js"></script>
+<script>
+  let BALL = document.getElementById('ball');
+  let flyBall = new FlyBall(BALL);
+</script>
+</body>
+</html>

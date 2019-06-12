@@ -8,10 +8,13 @@ class FlyBall extends DragBall {
     this.verticalMove = this.verticalMove.bind(this);
     this.EVALUATE = this.evaluate.bind(this);
 
-    // 添加鼠标按下后让小球停止运动的回调
+    // 鼠标按下后让小球停止运动
     this.subDown.add(this.STOP);
+    // 计算速度
     this.subMove.add(this.EVALUATE);
+    // 水平运动
     this.subUp.add(this.horizontalMove);
+    // 垂直运动
     this.subUp.add(this.verticalMove);
 
     // 计算运动的范围
@@ -29,6 +32,7 @@ class FlyBall extends DragBall {
     this.lastY = el.offsetTop;
   }
 
+  // 水平方向动画
   horizontalMove(el) {
     let _this = this;
 
@@ -59,10 +63,12 @@ class FlyBall extends DragBall {
     }, 16)
   }
 
+  // 垂直方向动画
   verticalMove(el) {
     let _this = this,
       flag = 0,
       maxT = _this.maxT;
+    _this.speedY === undefined ? _this.speedY = 0 : null;
 
     this.vTimer = setInterval(() => {
       if (flag > 1) {
@@ -72,7 +78,7 @@ class FlyBall extends DragBall {
       let curT = el.offsetTop;
 
       // 模拟重力加速度
-      _this.speedY += 9.8;
+      _this.speedY += 2;
       // 模拟空气摩擦力导致速度衰减
       _this.speedY *= 0.98;
 

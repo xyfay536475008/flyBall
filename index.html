@@ -50,9 +50,11 @@
     .rotateRight {
       animation: rr 1s linear infinite;
     }
+
     .rotateLeft {
       animation: rl 1s linear infinite;
     }
+
     .animationForwards {
       animation-fill-mode: forwards;
       animation-play-state: paused;
@@ -66,6 +68,7 @@
         transform: rotate(360deg);
       }
     }
+
     @keyframes rl {
       from {
         transform: rotate(0);
@@ -172,7 +175,6 @@
     tips = document.getElementsByClassName('tips')[0],
     ball = document.getElementById('ball'),
     game = document.getElementsByClassName('game')[0];
-  let arr = '0749-1922, 0750-1830, 0735-2100';
 
   btn.onclick = function () {
     let val = input.value;
@@ -188,7 +190,7 @@
   };
 
   function computedTime(a) {
-    let time;
+    let time = 0;
     a.forEach(item => {
       item = item.trim();
       let arr = item.split('-');
@@ -197,7 +199,7 @@
       });
       let morning = arr[0],
         evening = arr[1];
-      time = (9 - Math.ceil(morning) + parseFloat(evening) - 18.3).toFixed(2);
+      time += parseFloat((9 - Math.ceil(morning) + parseFloat(evening) - 18.3).toFixed(2));
     });
     let hour = parseInt(time),
       minus = parseInt(60 * (time - hour)),

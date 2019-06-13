@@ -75,7 +75,7 @@ class FlyBall extends DragBall {
 
       // 结束运动
       if (Math.abs(this.speedX) < 0.5) {
-        utils.clearClass(el);
+        utils.addClass(el, 'animationForwards');
         clearTimeout(this.hTimer);
       }
     }, 16)

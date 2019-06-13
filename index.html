@@ -206,6 +206,10 @@
       leftTime = 8 - time,
       leftHour = parseInt(leftTime),
       leftMinus = parseInt(60 * (leftTime - leftHour));
+    if (leftTime <= 0) {
+      alert('您已经加班：' + hour + ' 小时' + minus + ' 分, 工作辛苦了！');
+      return;
+    }
     alert('您已经加班：' + hour + ' 小时' + minus + ' 分, 还需' + leftHour + '小时' + leftMinus + '分');
   }
 </script>

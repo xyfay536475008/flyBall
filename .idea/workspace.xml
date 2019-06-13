@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ac4799ba-4cc0-430a-9483-f5a1ee24a45c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/flyBall.js" beforeDir="false" afterPath="$PROJECT_DIR$/flyBall.js" afterDir="false" />
-    </list>
+    <list default="true" id="ac4799ba-4cc0-430a-9483-f5a1ee24a45c" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -85,7 +83,7 @@
           <entry key="babelrc" value="24" />
           <entry key="css" value="24" />
           <entry key="html" value="8878" />
-          <entry key="js" value="9088" />
+          <entry key="js" value="9104" />
           <entry key="json" value="52" />
           <entry key="less" value="1500" />
           <entry key="md" value="87" />
@@ -96,7 +94,7 @@
           <entry key="CSS" value="24" />
           <entry key="HTML" value="8878" />
           <entry key="JSON" value="76" />
-          <entry key="JavaScript" value="9088" />
+          <entry key="JavaScript" value="9104" />
           <entry key="Less" value="1500" />
           <entry key="PLAIN_TEXT" value="87" />
         </counts>
@@ -135,11 +133,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5361842">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="42">
-                  <caret line="165" column="23" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="23" />
+                <state relative-caret-position="234">
+                  <caret line="44" column="43" lean-forward="true" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
                   <folding>
                     <element signature="n#script#0;n#head#0;n#html#0;n#!!top" />
                   </folding>
@@ -156,11 +154,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/flyBall.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="82" column="14" selection-start-line="82" selection-start-column="2" selection-end-line="82" selection-end-column="14" />
+                <state relative-caret-position="285">
+                  <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
                   <folding>
                     <element signature="n#!!block;n#horizontalMove#0;n#FlyBall#0" />
                     <element signature="n#!!block;n#verticalMove#0;n#FlyBall#0" />
@@ -410,12 +408,12 @@
       <workItem from="1558869791515" duration="3971000" />
       <workItem from="1559059233167" duration="371000" />
       <workItem from="1559174344681" duration="10714000" />
-      <workItem from="1559606195443" duration="67195000" />
+      <workItem from="1559606195443" duration="67481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="303041000" />
+    <option name="totallyTimeSpent" value="303327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -666,16 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="165" column="23" selection-start-line="165" selection-start-column="23" selection-end-line="165" selection-end-column="23" />
-          <folding>
-            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dragBall.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-78">
@@ -685,11 +673,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/flyBall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="82" column="14" selection-start-line="82" selection-start-column="2" selection-end-line="82" selection-end-column="14" />
+        <state relative-caret-position="285">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding>
             <element signature="n#!!block;n#horizontalMove#0;n#FlyBall#0" />
             <element signature="n#!!block;n#verticalMove#0;n#FlyBall#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="44" column="43" lean-forward="true" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+          <folding>
+            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" />
           </folding>
         </state>
       </provider>

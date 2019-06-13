@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac4799ba-4cc0-430a-9483-f5a1ee24a45c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ball.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/flyBall.js" beforeDir="false" afterPath="$PROJECT_DIR$/flyBall.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -89,7 +85,7 @@
           <entry key="babelrc" value="24" />
           <entry key="css" value="24" />
           <entry key="html" value="8878" />
-          <entry key="js" value="9031" />
+          <entry key="js" value="9088" />
           <entry key="json" value="52" />
           <entry key="less" value="1500" />
           <entry key="md" value="87" />
@@ -100,7 +96,7 @@
           <entry key="CSS" value="24" />
           <entry key="HTML" value="8878" />
           <entry key="JSON" value="76" />
-          <entry key="JavaScript" value="9031" />
+          <entry key="JavaScript" value="9088" />
           <entry key="Less" value="1500" />
           <entry key="PLAIN_TEXT" value="87" />
         </counts>
@@ -163,9 +159,10 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/flyBall.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="513">
-                  <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+                <state relative-caret-position="180">
+                  <caret line="82" column="14" selection-start-line="82" selection-start-column="2" selection-end-line="82" selection-end-column="14" />
                   <folding>
+                    <element signature="n#!!block;n#horizontalMove#0;n#FlyBall#0" />
                     <element signature="n#!!block;n#verticalMove#0;n#FlyBall#0" />
                   </folding>
                 </state>
@@ -197,8 +194,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/dragBall.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="482">
-                  <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+                <state relative-caret-position="330">
+                  <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -238,7 +235,6 @@
       <find>touchStartHandle</find>
       <find>changedTouches</find>
       <find>Subscribe</find>
-      <find>verticalMove</find>
       <find>evaluate</find>
       <find>EVALUATE</find>
       <find>;</find>
@@ -249,6 +245,7 @@
       <find>_this</find>
       <find>rotateRight</find>
       <find>con</find>
+      <find>verticalMove</find>
     </findStrings>
     <replaceStrings>
       <replace>changeFocus</replace>
@@ -298,10 +295,10 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index_.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/dragBall.js" />
         <option value="$PROJECT_DIR$/subscribe.js" />
         <option value="$PROJECT_DIR$/utils.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/dragBall.js" />
         <option value="$PROJECT_DIR$/flyBall.js" />
       </list>
     </option>
@@ -413,18 +410,18 @@
       <workItem from="1558869791515" duration="3971000" />
       <workItem from="1559059233167" duration="371000" />
       <workItem from="1559174344681" duration="10714000" />
-      <workItem from="1559606195443" duration="66646000" />
+      <workItem from="1559606195443" duration="67195000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="302492000" />
+    <option name="totallyTimeSpent" value="303041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49159664" visible="true" weight="0.1430585" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49159664" visible="true" weight="0.1430585" />
       <window_info id="Structure" order="1" sideWeight="0.50840336" side_tool="true" weight="0.36819172" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -436,7 +433,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4949495" weight="0.22168675" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.4949495" visible="true" weight="0.22168675" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5050505" side_tool="true" weight="0.586747" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -655,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dragBall.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-78">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/subscribe.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -686,11 +676,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dragBall.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-78">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/flyBall.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="74" column="29" selection-start-line="74" selection-start-column="29" selection-end-line="74" selection-end-column="29" />
+        <state relative-caret-position="180">
+          <caret line="82" column="14" selection-start-line="82" selection-start-column="2" selection-end-line="82" selection-end-column="14" />
           <folding>
+            <element signature="n#!!block;n#horizontalMove#0;n#FlyBall#0" />
             <element signature="n#!!block;n#verticalMove#0;n#FlyBall#0" />
           </folding>
         </state>

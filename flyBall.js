@@ -20,6 +20,9 @@ class FlyBall extends DragBall {
     // 计算运动的范围
     this.maxL = document.documentElement.clientWidth - el.offsetWidth;
     this.maxT = document.documentElement.clientHeight - el.offsetHeight;
+
+    // 自动触发篮球自由落体
+    this.subUp.fire(el);
   }
 
   // 鼠标拖拽的回调

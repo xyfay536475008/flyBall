@@ -176,7 +176,7 @@
     ball = document.getElementById('ball'),
     game = document.getElementsByClassName('game')[0];
 
-  let reg = /^(\d{4}-\d{4})(,\1)*$/;
+  let reg = /^(\d{4}-\d{4})(,(\d{4}-\d{4}))*$/;
   btn.onclick = function () {
     let val = input.value;
     val = val.replace(/，/g, ',');

@@ -2,17 +2,37 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
+  <title>加班计时器 X 指尖篮球</title>
   <style>
     html, body {
-      font-size: 100px;
+      height: 100%;
       margin: 0;
+      background: #fff;
+    }
+
+    h2 {
+      white-space: nowrap;
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: .4rem;
+      height: .6rem;
+      line-height: .6rem;
+      text-align: center;
+      color: #AC8900;
+    }
+
+    h2 span {
+      color: #4E3100;
+      font-size: .34rem;
     }
 
     #ball {
-      width: 1rem;
-      height: 1rem;
-      line-height: 1rem;
+      display: none;
+      width: 1.5rem;
+      height: 1.5rem;
+      line-height: 1.5rem;
       border-radius: 50%;
       background: lightsalmon;
       position: fixed;
@@ -22,30 +42,166 @@
       color: #333;
       font-size: .24rem;
       text-align: center;
+      background: url("ball.jpg") no-repeat;
+      background-size: contain;
+      transform-origin: 50% 50%;
+    }
+
+    .rotateRight {
+      animation: rr 1s linear infinite;
+    }
+    .rotateLeft {
+      animation: rl 1s linear infinite;
+    }
+
+    @keyframes rr {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes rl {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(-360deg);
+      }
+    }
+
+    #timeBox {
+      width: 80%;
+      position: fixed;
+      top: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      align-items: center;
+    }
+
+    #timeBox .inputWrap {
+      display: flex;
+      align-items: center;
+      width: 80%;
+      height: .5rem;
+      line-height: .5rem;
+      padding: 0 .05rem;
+      border: .02rem solid #FFD42C;
+      border-radius: .05rem;
+      box-shadow: 0 .02rem .05rem .02rem rgba(255, 212, 44, 0.5);
+      background: #fff;
+    }
+
+    #timeBox .inputWrap .timeInput {
+      width: 100%;
+      height: .34rem;
+      line-height: .34rem;
+      outline: none;
+      font-size: .34rem;
+      border: 0;
+    }
+
+    #timeBox .timeBtn {
+      width: 20%;
+      box-sizing: border-box;
+      padding: 0 .05rem;
+      height: .5rem;
+      line-height: .5rem;
+      text-align: center;
+      white-space: nowrap;
+      font-size: .24rem;
+      color: #fff;
+      margin-left: .1rem;
+      background-color: #FFD42C;
+      border: .02rem solid #FFD42C;
+      border-radius: .05rem;
+      outline: none;
+    }
+
+    .tips {
+      position: absolute;
+      bottom: -.5rem;
+      font-size: .26rem;
+      color: #4E3100;
+    }
+
+    .tips a {
+      color: #AC8900;
     }
   </style>
   <script>
     ~function () {
-      let wh = document.documentElement.clientWidth || document.body.clientWidth,
-        desW = 750,
-        computedRem = () => {
-          if (wh > desW) {
-            document.documentElement.style.fontSize = '100px';
-          }
-          document.documentElement.style.fontSize = wh / desW * 100 + 'px';
-        };
+      computedRem = () => {
+        let wh = document.documentElement.clientWidth || document.body.clientWidth,
+          desW = 750;
+        if (wh > desW) {
+          document.documentElement.style.fontSize = '100px';
+          return;
+        }
+        document.documentElement.style.fontSize = wh / desW * 100 + 'px';
+      };
+      computedRem();
       window.addEventListener('resize', computedRem)
     }()
   </script>
 </head>
 <body>
-<div id="ball">菜虚鲲</div>
+<h2>加班计时器 <span>X</span> 指尖篮球</h2>
+<div id="timeBox">
+  <div class="inputWrap">
+    <input type="text" class="timeInput" placeholder="0855-1830,0900-2030,...">
+  </div>
+  <button class="timeBtn">查询</button>
+  <div class="tips">加班累了？来玩解压小游戏 <a class="game" href="javascript:;">指尖篮球</a>！</div>
+
+</div>
+<div id="ball" class="">C T R L</div>
+<script src="utils.js"></script>
 <script src="subscribe.js"></script>
 <script src="dragBall.js"></script>
 <script src="flyBall.js"></script>
 <script>
-  let BALL = document.getElementById('ball');
-  let flyBall = new FlyBall(BALL);
+  let input = document.getElementsByClassName('timeInput')[0],
+    btn = document.getElementsByClassName('timeBtn')[0],
+    tips = document.getElementsByClassName('tips')[0],
+    ball = document.getElementById('ball'),
+    game = document.getElementsByClassName('game')[0];
+  let arr = '0749-1922, 0750-1830, 0735-2100';
+
+  btn.onclick = function () {
+    let val = input.value;
+    computedTime(val.split(','));
+    input.value = '';
+  };
+
+  game.onclick = function () {
+    tips.style.display = 'none';
+    ball.style.display = 'block';
+    // 小球初始化
+    new FlyBall(ball);
+  };
+
+  function computedTime(a) {
+    let time;
+    a.forEach(item => {
+      item = item.trim();
+      let arr = item.split('-');
+      arr = arr.map(item => {
+        return item.substring(0, 2) + '.' + item.substring(2)
+      });
+      let morning = arr[0],
+        evening = arr[1];
+      time = (9 - Math.ceil(morning) + parseFloat(evening) - 18.3).toFixed(2);
+    });
+    let hour = parseInt(time),
+      minus = parseInt(60 * (time - hour)),
+      leftTime = 8 - time,
+      leftHour = parseInt(leftTime),
+      leftMinus = parseInt(60 * (leftTime - leftHour));
+    alert('您已经加班：' + hour + ' 小时' + minus + ' 分, 还需' + leftHour + '小时' + leftMinus + '分');
+  }
 </script>
 </body>
 </html>
